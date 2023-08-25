@@ -1,0 +1,53 @@
+Certainly! Here's an explanation of each of the functions you've mentioned, along with an example for each:
+
+**i) `sample()` Function:**
+Purpose: The `sample()` function is used to generate random samples from a given set of values. It's often used for random sampling and shuffling.
+
+Example:
+```r
+# Generate a random sample of 5 numbers from 1 to 10
+random_sample <- sample(1:10, size = 5)
+print(random_sample)
+```
+
+**ii) `dnorm()` Function:**
+Purpose: The `dnorm()` function calculates the probability density function (PDF) of the normal distribution at a specific value.
+
+Example:
+```r
+# Calculate the PDF of the standard normal distribution at x = 0
+pdf_at_0 <- dnorm(0)
+print(pdf_at_0)
+```
+
+**iii) `pnorm()` Function:**
+Purpose: The `pnorm()` function calculates the cumulative distribution function (CDF) of the normal distribution up to a given value.
+
+Example:
+```r
+# Calculate the CDF of the standard normal distribution at x = 1.5
+cdf_at_1_5 <- pnorm(1.5)
+print(cdf_at_1_5)
+```
+
+**iv) `qnorm()` Function:**
+Purpose: The `qnorm()` function calculates the quantile (inverse cumulative distribution) function of the normal distribution for a given probability.
+
+Example:
+```r
+# Find the value of x corresponding to the 0.8 quantile of the standard normal distribution
+quantile_0_8 <- qnorm(0.8)
+print(quantile_0_8)
+```
+
+**v) `rnorm()` Function:**
+Purpose: The `rnorm()` function generates random numbers from a normal distribution with specified mean and standard deviation.
+
+Example:
+```r
+# Generate a vector of 10 random numbers from N(0, 1)
+random_numbers <- rnorm(10, mean = 0, sd = 1)
+print(random_numbers)
+```
+
+In these examples, you can see how these functions are used to perform different tasks related to random sampling, probability calculations, and generating random numbers from the normal distribution in R.

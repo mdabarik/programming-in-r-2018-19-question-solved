@@ -1,0 +1,36 @@
+Certainly! Here are the R commands to perform a one-sample t-test and a two-sample t-test:
+
+**One-Sample T-Test:**
+
+```r
+# Example data
+data <- c(23, 28, 32, 25, 30, 27, 29, 31, 26, 24)
+
+# Perform a one-sample t-test
+t_test_result <- t.test(data, mu = 30)  # Testing against a population mean of 30
+
+# Print the t-test result
+print(t_test_result)
+```
+
+In this example, `data` is your sample data, and you're testing whether the sample mean is significantly different from a specified population mean (in this case, 30).
+
+**Two-Sample T-Test:**
+
+```r
+# Example data for two samples
+group1 <- c(23, 28, 32, 25, 30)
+group2 <- c(27, 29, 31, 26, 24)
+
+# Perform a two-sample t-test
+t_test_result <- t.test(group1, group2)
+
+# Print the t-test result
+print(t_test_result)
+```
+
+In this example, `group1` and `group2` are two sets of data that you're comparing. The `t.test()` function performs a two-sample t-test to test whether the means of the two groups are significantly different.
+
+The printed t-test results will include information about the test statistic, degrees of freedom, p-value, confidence intervals, and more.
+
+Remember to replace the example data with your actual data when using these commands.

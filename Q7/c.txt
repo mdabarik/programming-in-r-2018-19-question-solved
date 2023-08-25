@@ -1,0 +1,30 @@
+Certainly! Here's an R program that constructs the sample space for an experiment of tossing a coin a specified number of times:
+
+```r
+# Function to generate all possible outcomes for coin tosses
+generate_sample_space <- function(num_tosses) {
+  outcomes <- c("H", "T")  # "H" for heads, "T" for tails
+  
+  # Initialize the sample space with the outcomes of the first toss
+  sample_space <- outcomes
+  
+  # Generate additional outcomes by appending each outcome to the existing sample space
+  for (i in 2:num_tosses) {
+    new_space <- expand.grid(sample_space, outcomes)
+    sample_space <- apply(new_space, 1, paste, collapse = "")
+  }
+  
+  return(sample_space)
+}
+
+# Specify the number of coin tosses
+num_tosses <- 3
+
+# Generate and print the sample space
+sample_space <- generate_sample_space(num_tosses)
+print(sample_space)
+```
+
+In this example, the `generate_sample_space()` function generates the sample space for a specified number of coin tosses. It starts by defining the outcomes ("H" for heads and "T" for tails) and then uses a loop to create new outcomes by combining the previous outcomes with the current set of outcomes.
+
+You can change the `num_tosses` variable to any positive integer to construct the sample space for a different number of coin tosses. The `sample_space` variable will contain all possible outcomes for the experiment.

@@ -1,0 +1,56 @@
+To plot the function f(x) = (x - 2)^2 using the `curve` function in R, you can follow these steps:
+
+```r
+# Define the function
+f <- function(x) {
+  return((x - 2)^2)
+}
+
+# Plot the function
+curve(f, from = -4, to = 8, xlab = "x", ylab = "f(x)", main = "Plot of f(x) = (x - 2)^2")
+```
+
+Now, let's discuss the purposes and functions of the graphical methods you mentioned:
+
+i) **Box Plot**:
+Purpose: Box plots are used to display the distribution of a dataset, showing its median, quartiles, and potential outliers. They are particularly useful for comparing multiple datasets or identifying skewness and variability.
+
+Function (`boxplot`):
+The `boxplot` function creates box plots in R. It can take multiple datasets and arrange their box plots side by side for easy comparison.
+
+Example:
+```r
+# Create a box plot for a dataset
+data <- c(10, 15, 18, 20, 22, 25, 30, 32, 35)
+boxplot(data, main = "Box Plot of Data")
+```
+
+ii) **Pie Chart**:
+Purpose: Pie charts are used to represent the proportions of different categories within a dataset. They are suitable for illustrating parts of a whole and are effective when you want to show the relative sizes of categories.
+
+Function (`pie`):
+The `pie` function creates pie charts in R. It takes a vector of values representing the sizes of different categories.
+
+Example:
+```r
+# Create a pie chart
+categories <- c("Category A", "Category B", "Category C")
+values <- c(30, 45, 25)
+pie(values, labels = categories, main = "Pie Chart of Categories")
+```
+
+iii) **Normal Probability Plot**:
+Purpose: Normal probability plots, also known as quantile-quantile (Q-Q) plots, are used to assess whether a dataset follows a normal distribution. They plot the quantiles of the data against the quantiles of a theoretical normal distribution.
+
+Function (`qqnorm` and `qqline`):
+The `qqnorm` function creates a normal probability plot, and the `qqline` function adds a reference line to the plot. The reference line helps you assess how well the data aligns with a normal distribution.
+
+Example:
+```r
+# Create a normal probability plot
+data <- rnorm(100)  # Generate random normal data
+qqnorm(data, main = "Normal Probability Plot")
+qqline(data)  # Add reference line
+```
+
+These graphical methods are just a few examples of the wide range of visualization tools available in R for exploring and analyzing different types of data.

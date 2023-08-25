@@ -1,0 +1,28 @@
+Certainly! Here's an example of how you could write a simple function in R to calculate the arithmetic mean (average) of a set of numeric values:
+
+```r
+# Define a function to calculate the arithmetic mean
+calculate_mean <- function(values) {
+  num_values <- length(values)
+  
+  if (num_values == 0) {
+    return(NA)  # Return NA if no values provided
+  }
+  
+  total <- sum(values)
+  mean <- total / num_values
+  
+  return(mean)
+}
+
+# Call the function with a set of values
+data <- c(15, 20, 25, 30, 35)
+mean_value <- calculate_mean(data)
+print(paste("Arithmetic Mean:", mean_value))
+```
+
+In this example, the `calculate_mean()` function takes a vector of numeric values as an argument and calculates the arithmetic mean. If no values are provided, the function returns `NA`.
+
+The function first calculates the total sum of the values using the `sum()` function and then divides it by the number of values to obtain the mean.
+
+You can call the function with different sets of values to calculate their arithmetic mean.

@@ -1,0 +1,36 @@
+In R, there are various sorting algorithms available, some of which are implemented in the base package while others are available through additional packages. The primary sorting function in R is `sort()`, which implements an optimized hybrid sorting algorithm that combines quicksort, insertion sort, and other techniques.
+
+Here's how you can use the `sort()` function for sorting a vector:
+
+```r
+# Sorting a vector
+vector <- c(5, 2, 8, 1, 3)
+sorted_vector <- sort(vector)
+```
+
+For matrices, you can sort the rows using the `order()` function. Here's an example:
+
+```r
+# Sorting matrix rows based on a specific column
+matrix <- matrix(c(1, 5, -2, 1, 2, -1, 2, 6, -3), ncol = 3, byrow = TRUE)
+sorted_matrix <- matrix[order(matrix[, 1]), ]
+```
+
+Regarding the matrix you provided, let's perform the requested operations:
+
+**Create the matrix:**
+```r
+matrix <- matrix(c(1, 1, 2, 5, 2, 6, -2, -1, -3), ncol = 3, byrow = TRUE)
+```
+
+**Transpose:**
+```r
+transpose_matrix <- t(matrix)
+```
+
+**Inverse:**
+```r
+inverse_matrix <- solve(matrix)
+```
+
+In this case, `t(matrix)` returns the transpose of the matrix, and `solve(matrix)` calculates the inverse. However, be cautious when calculating the inverse, as not all matrices are invertible. You should also verify the result to ensure accuracy.

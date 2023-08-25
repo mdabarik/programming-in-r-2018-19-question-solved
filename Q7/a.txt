@@ -1,0 +1,31 @@
+Certainly! Here are the R commands to calculate the simple correlation coefficient and fit a simple linear regression model:
+
+**Simple Correlation Coefficient:**
+
+```r
+# Example data
+x <- c(12, 15, 20, 25, 30)
+y <- c(22, 28, 35, 45, 50)
+
+# Calculate the correlation coefficient
+correlation_coefficient <- cor(x, y)
+print(correlation_coefficient)
+```
+
+In this example, `x` and `y` are your two variables. The `cor()` function calculates the Pearson correlation coefficient between the two variables.
+
+**Simple Linear Regression Model:**
+
+```r
+# Example data
+x <- c(12, 15, 20, 25, 30)
+y <- c(22, 28, 35, 45, 50)
+
+# Fit a simple linear regression model
+linear_model <- lm(y ~ x)
+summary(linear_model)
+```
+
+In this example, `x` is the independent variable, and `y` is the dependent variable. The `lm()` function fits a simple linear regression model. The `summary()` function provides a summary of the regression model's results, including coefficients, standard errors, p-values, and more.
+
+Remember to replace the example data with your actual data when using these commands.

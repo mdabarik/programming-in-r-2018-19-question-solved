@@ -1,0 +1,27 @@
+To obtain random numbers from a standard normal distribution and create histograms for different sample sizes (10, 100, 1000, 10000) in a single figure in R, you can use the following code with the `hist()` function and the `par()` function to arrange the plots:
+
+```r
+# Set up the layout for the plots
+par(mfrow = c(2, 2))
+
+# Generate and plot histograms for different sample sizes
+sample_sizes <- c(10, 100, 1000, 10000)
+
+for (size in sample_sizes) {
+  random_numbers <- rnorm(size)
+  hist(random_numbers, main = paste("Histogram (n =", size, ")", sep = ""), xlab = "Value", ylab = "Frequency", col = "lightblue")
+}
+
+# Reset the layout to default
+par(mfrow = c(1, 1))
+```
+
+In this code:
+
+- `par(mfrow = c(2, 2))` sets up a 2x2 grid for arranging the plots.
+- The loop generates random numbers for each sample size and creates histograms using the `hist()` function.
+- `main`, `xlab`, and `ylab` parameters are used to customize the titles and labels of the histograms.
+- `col` parameter sets the color of the bars in the histograms.
+- After plotting, `par(mfrow = c(1, 1))` resets the layout to the default.
+
+This code will create a single figure with four histograms, each corresponding to a different sample size. The histograms will be arranged in a 2x2 grid.

@@ -1,0 +1,31 @@
+Sure! Here's an example of how you could write a simple function in R to calculate a grade point based on a numeric score in a course:
+
+```r
+# Define a function to calculate grade point
+calculate_grade_point <- function(score) {
+  if (score >= 90) {
+    grade_point <- 4.0
+  } else if (score >= 80) {
+    grade_point <- 3.0
+  } else if (score >= 70) {
+    grade_point <- 2.0
+  } else if (score >= 60) {
+    grade_point <- 1.0
+  } else {
+    grade_point <- 0.0
+  }
+  
+  return(grade_point)
+}
+
+# Call the function with a score
+score <- 85
+grade_point <- calculate_grade_point(score)
+print(paste("Score:", score, "Grade Point:", grade_point))
+```
+
+In this example, the `calculate_grade_point()` function takes a numeric score as an argument and calculates a grade point based on a simple grading scale. You can modify the score thresholds and corresponding grade points to match your institution's grading policy.
+
+The function uses `if` and `else if` statements to determine the appropriate grade point based on the input score. It then returns the calculated grade point.
+
+You can call the function with different scores to obtain the corresponding grade points.

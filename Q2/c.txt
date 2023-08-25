@@ -1,0 +1,23 @@
+Variable Names:
+1. A variable name must start with a letter and can be a combination of letters, digits, period(.)
+and underscore(_). If it starts with period(.), it cannot be followed by a digit.
+2.A variable name cannot start with a number or underscore (_)
+3.Variable names are case-sensitive (age, Age and AGE are three different variables)
+4.Reserved words cannot be used as variables (TRUE, FALSE, NULL, if...)
+
+
+
+Invalid variable names:
+123variable   # Cannot start with a number
+my-variable   # Contains an invalid character (-)
+if            # Reserved word
+My Variable   # Contains a space
+
+
+
+Valid Variable names:
+x
+variable1
+my_variable
+dataFrame
+this_is_valid

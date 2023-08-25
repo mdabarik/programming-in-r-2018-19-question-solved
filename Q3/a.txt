@@ -1,0 +1,42 @@
+A repetitive structure in programming allows you to execute a block of code multiple times, based on a certain condition or iteration. Two common types of repetitive structures are the `repeat` loop and the `while` loop in R.
+
+**i) `repeat` Loop:**
+The `repeat` loop is an infinite loop that keeps executing the enclosed block of code until a `break` statement is encountered. It's important to have a mechanism inside the loop that will eventually cause it to terminate; otherwise, it will run indefinitely.
+
+Purpose:
+The `repeat` loop is used when you want to execute a block of code repeatedly until a certain condition is met.
+
+General Form:
+```r
+repeat {
+  # Code block
+  if (condition) {
+    break
+  }
+}
+```
+
+**ii) `while` Loop:**
+The `while` loop repeatedly executes a block of code as long as a specified condition evaluates to `TRUE`. It checks the condition before each iteration and exits the loop when the condition becomes `FALSE`.
+
+Purpose:
+The `while` loop is used when you want to repeatedly execute a block of code while a particular condition holds true.
+
+General Form:
+```r
+while (condition) {
+  # Code block
+}
+```
+
+Example of `for` loop to display the square root of integers from one to ten:
+```r
+for (i in 1:10) {
+  sqrt_value <- sqrt(i)
+  cat("The square root of", i, "is", sqrt_value, "\n")
+}
+```
+
+In this example, the `for` loop iterates over integers from 1 to 10 (inclusive), calculates the square root of each integer, and prints the result using the `cat()` function. The output will show the square roots of integers from 1 to 10.
+
+It's important to choose the appropriate loop type based on your specific use case. The `for` loop is particularly useful when you know the number of iterations in advance, while the `while` loop is more suitable when the number of iterations depends on a certain condition.

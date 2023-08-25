@@ -1,0 +1,21 @@
+Sure, here's the R code to accomplish the tasks you've mentioned:
+
+**i) Obtain 100 random numbers from standard normal distribution:**
+```r
+# Generate 100 random numbers from standard normal distribution
+random_numbers <- rnorm(100)
+```
+
+**ii) Find P(X=5), where X follows binomial distribution with p=0.45 and n=20:**
+```r
+# Calculate P(X=5) for binomial distribution
+probability_x_equals_5 <- dbinom(5, size = 20, prob = 0.45)
+```
+
+**iii) Find P(-1 < x < 2), where X~N(0,1):**
+```r
+# Calculate P(-1 < X < 2) for standard normal distribution
+probability_between_minus1_and_2 <- pnorm(2) - pnorm(-1)
+```
+
+In these examples, `rnorm()` generates random numbers from a standard normal distribution, `dbinom()` calculates the probability mass function of the binomial distribution, and `pnorm()` calculates the cumulative distribution function of the standard normal distribution.
